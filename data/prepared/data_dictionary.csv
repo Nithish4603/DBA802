@@ -1,0 +1,45 @@
+column,dtype,role,description
+dur,float64,feature,Record/flow duration
+proto,object,feature,Transaction protocol
+service,object,feature,Network service
+state,object,feature,Connection state
+spkts,int64,feature,Source-to-destination packet count
+dpkts,int64,feature,Destination-to-source packet count
+sbytes,int64,feature,Source-to-destination bytes
+dbytes,int64,feature,Destination-to-source bytes
+rate,float64,feature,Packet/flow rate
+sttl,int64,feature,Source time-to-live
+dttl,int64,feature,Destination time-to-live
+sload,float64,feature,Source bits per second
+dload,float64,feature,Destination bits per second
+sloss,int64,feature,Source packets retransmitted/dropped
+dloss,int64,feature,Destination packets retransmitted/dropped
+sinpkt,float64,feature,Source inter-packet arrival time
+dinpkt,float64,feature,Destination inter-packet arrival time
+sjit,float64,feature,Source jitter
+djit,float64,feature,Destination jitter
+swin,int64,feature,Source TCP window
+stcpb,int64,feature,Source TCP base sequence number
+dtcpb,int64,feature,Destination TCP base sequence number
+dwin,int64,feature,Destination TCP window
+tcprtt,float64,feature,TCP round-trip time
+synack,float64,feature,SYN-to-SYN/ACK time
+ackdat,float64,feature,SYN/ACK-to-ACK time
+smean,int64,feature,Mean source packet size
+dmean,int64,feature,Mean destination packet size
+trans_depth,int64,feature,HTTP transaction pipeline depth
+response_body_len,int64,feature,HTTP response body length
+ct_srv_src,int64,feature,Connections sharing service/source context
+ct_state_ttl,int64,feature,Connections sharing state/TTL context
+ct_dst_ltm,int64,feature,Recent connections to destination
+ct_src_dport_ltm,int64,feature,Recent connections from source to destination port
+ct_dst_sport_ltm,int64,feature,Recent connections to destination from source port
+ct_dst_src_ltm,int64,feature,Recent connections sharing source/destination
+is_ftp_login,int64,feature,FTP login indicator
+ct_ftp_cmd,int64,feature,FTP command count
+ct_flw_http_mthd,int64,feature,HTTP method count
+ct_src_ltm,int64,feature,Recent connections from source
+ct_srv_dst,int64,feature,Connections sharing service/destination context
+is_sm_ips_ports,int64,feature,Source/destination IP/port similarity indicator
+attack_cat,object,target,Traffic category (Normal or attack family)
+label,int64,target,"Binary target: 0=Normal, 1=Attack"

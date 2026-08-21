@@ -1,0 +1,13 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+outputs/models/*.joblib
+outputs/models/*.json
+outputs/figures/*.png
+outputs/figures/*.csv
+outputs/metrics/*.csv
+outputs/metrics/*.json
+outputs/predictions/*.csv
