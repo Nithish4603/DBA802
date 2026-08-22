@@ -1,0 +1,25 @@
+{
+  "dataset_rows": 768,
+  "features": [
+    "relative_compactness",
+    "surface_area",
+    "wall_area",
+    "roof_area",
+    "overall_height",
+    "orientation",
+    "glazing_area",
+    "glazing_distribution"
+  ],
+  "targets": [
+    "heating_load",
+    "cooling_load"
+  ],
+  "train_rows": 460,
+  "calibration_rows": 154,
+  "test_rows": 154,
+  "best_model": "xgboost",
+  "random_seed": 42,
+  "xgboost_available": true,
+  "prescriptive_search": "orientation, glazing area, and glazing distribution varied over values observed in the dataset; structural geometry held fixed",
+  "uncertainty_method": "split conformal prediction, 90% marginal intervals per target"
+}

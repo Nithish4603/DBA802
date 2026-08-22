@@ -1,0 +1,11 @@
+{
+  "note": "All values are model-estimated predicted-load changes, not measured physical energy savings.",
+  "n_test_designs": 154,
+  "prescriptive_wins_against_all_baselines_pct": 92.20779220779221,
+  "prescriptive_beats_random_mean_pct": 100.0,
+  "prescriptive_beats_rule_based_pct": 100.0,
+  "mean_reduction_vs_current": 4.5977334728488675,
+  "mean_reduction_pct_vs_current": 8.280443030067755,
+  "mean_reduction_vs_random_mean": 5.30926107431387,
+  "mean_reduction_vs_rule_based": 5.103668212890625
+}
