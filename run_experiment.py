@@ -2,7 +2,7 @@
 
 The script generates a controlled illustrative benchmark, compares a data-only
 AI model with an explicit knowledge layer and their hybrid, performs a small
-component ablation, and writes the two manuscript figures plus five optional
+component ablation, and writes the two manuscript figures plus three optional
 diagnostic figures. The benchmark is synthetic by design; replace
 ``make_benchmark`` with approved real data before making sector-level claims.
 """
@@ -554,17 +554,16 @@ def main() -> None:
     print(f"Wilcoxon hybrid vs knowledge-rules squared-error p-value: {p_rules:.4g}")
     print(f"Saved result CSVs to: {args.results_dir}")
 
-    make_framework_figure(args.output / "figure_1_framework.png")
-    make_results_figure(means, stds, sweep, args.output / "figure_2_results.png")
-
     combined = source_by_seed and pd.concat(source_by_seed.values(), ignore_index=True)
     if combined is None or len(combined) == 0:
         combined = build_dataset(args.n_samples, args.seeds)
-    make_correlation_heatmap(combined, args.output / "figure_3_correlation_heatmap.png")
-    make_feature_importance_figure(runs, args.output / "figure_4_feature_importance.png")
-    make_roc_pr_figure(runs, args.output / "figure_5_roc_pr_curves.png")
-    make_confusion_matrix_figure(runs, args.output / "figure_6_confusion_matrices.png")
-    make_calibration_figure(runs, args.output / "figure_7_calibration_curve.png")
+    # The two manuscript figures are the supplied correlation audit and the
+    # pooled ROC/PR comparison. Other diagnostics remain reproducible outputs.
+    make_correlation_heatmap(combined, args.output / "figure_1_correlation_heatmap.png")
+    make_roc_pr_figure(runs, args.output / "figure_2_roc_pr_curves.png")
+    make_feature_importance_figure(runs, args.output / "diagnostic_feature_importance.png")
+    make_confusion_matrix_figure(runs, args.output / "diagnostic_confusion_matrices.png")
+    make_calibration_figure(runs, args.output / "diagnostic_calibration_curve.png")
     print("Saved figures to:", args.output)
 
 

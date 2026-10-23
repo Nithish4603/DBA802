@@ -1,5 +1,5 @@
-Combines business data with explicit domain knowledge.
-Adds interpretable rules to a supervised AI model.
-Produces opportunity scores and rule-based explanations.
-Demonstrates repeated-seed reproducible evaluation.
-Separates data and knowledge contributions by ablation.
+- Combines business data with explicit domain knowledge.
+- Adds interpretable rules to a supervised AI model.
+- Produces opportunity scores and rule-based explanations.
+- Demonstrates repeated-seed reproducible evaluation.
+- Separates data and knowledge contributions by ablation.
